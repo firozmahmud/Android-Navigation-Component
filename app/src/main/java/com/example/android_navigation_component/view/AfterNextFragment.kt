@@ -10,6 +10,12 @@ import com.example.android_navigation_component.base.BaseFragment
 
 class AfterNextFragment : BaseFragment() {
 
+    private var bundle: String? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        bundle = requireArguments().getString("bundle")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,5 +25,11 @@ class AfterNextFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_after_next, container, false)
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        bundle?.let { showToast(it) }
+    }
 
 }

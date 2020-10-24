@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.android_navigation_component.R
@@ -13,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_next.*
 
 class NextFragment : BaseFragment() {
 
-    private var navController: NavController? = null
+    lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,7 +30,8 @@ class NextFragment : BaseFragment() {
         navController = Navigation.findNavController(view)
 
         btnNext.setOnClickListener {
-            navController!!.navigate(R.id.action_nextFragment_to_afterNextFragment)
+            var bundle = bundleOf("bundle" to null)
+            navController!!.navigate(R.id.action_nextFragment_to_afterNextFragment, bundle)
         }
     }
 

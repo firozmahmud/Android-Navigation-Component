@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : BaseFragment() {
 
-    private var navController: NavController? = null
+    lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater,

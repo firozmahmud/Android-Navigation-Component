@@ -8,19 +8,35 @@
     <fragment
         android:id="@+id/afterNextFragment"
         android:name="com.example.android_navigation_component.view.AfterNextFragment"
-        android:label="AfterNextFragment" />
+        android:label="AfterNextFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
     <fragment
         android:id="@+id/bottomFragment"
         android:name="com.example.android_navigation_component.view.BottomFragment"
-        android:label="BottomFragment" />
+        android:label="BottomFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
     <fragment
         android:id="@+id/topFragment"
         android:name="com.example.android_navigation_component.view.TopFragment"
-        android:label="TopFragment" />
+        android:label="TopFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
     <fragment
         android:id="@+id/middleFragment"
         android:name="com.example.android_navigation_component.view.MiddleFragment"
-        android:label="MiddleFragment">
+        android:label="MiddleFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
         <action
             android:id="@+id/action_middleFragment_to_nextFragment"
             app:destination="@id/nextFragment" />
@@ -28,7 +44,11 @@
     <fragment
         android:id="@+id/nextFragment"
         android:name="com.example.android_navigation_component.view.NextFragment"
-        android:label="NextFragment">
+        android:label="NextFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right">
         <action
             android:id="@+id/action_nextFragment_to_afterNextFragment"
             app:destination="@id/afterNextFragment" />
@@ -37,6 +57,10 @@
         android:id="@+id/mainFragment"
         android:name="com.example.android_navigation_component.view.MainFragment"
         android:label="fragment_main"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_middleFragment"
