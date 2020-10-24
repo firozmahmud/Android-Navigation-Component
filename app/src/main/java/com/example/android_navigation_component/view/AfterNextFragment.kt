@@ -19,5 +19,5 @@ class AfterNextFragment : BaseFragment() {
         return inflater.inflate(R.layout.fragment_after_next, container, false)
     }
 
-   
+
 }
