@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/afterNextFragment"
+        android:name="com.example.android_navigation_component.view.AfterNextFragment"
+        android:label="AfterNextFragment" />
+    <fragment
+        android:id="@+id/bottomFragment"
+        android:name="com.example.android_navigation_component.view.BottomFragment"
+        android:label="BottomFragment" />
+    <fragment
+        android:id="@+id/topFragment"
+        android:name="com.example.android_navigation_component.view.TopFragment"
+        android:label="TopFragment" />
+    <fragment
+        android:id="@+id/middleFragment"
+        android:name="com.example.android_navigation_component.view.MiddleFragment"
+        android:label="MiddleFragment">
+        <action
+            android:id="@+id/action_middleFragment_to_nextFragment"
+            app:destination="@id/nextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextFragment"
+        android:name="com.example.android_navigation_component.view.NextFragment"
+        android:label="NextFragment">
+        <action
+            android:id="@+id/action_nextFragment_to_afterNextFragment"
+            app:destination="@id/afterNextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.android_navigation_component.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_middleFragment"
+            app:destination="@id/middleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_topFragment"
+            app:destination="@id/topFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bottomFragment"
+            app:destination="@id/bottomFragment" />
+    </fragment>
+</navigation>

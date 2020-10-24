@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android-Navigation-Component</string>
+    <string name="top">Top</string>
+    <string name="bottom">Bottom</string>
+    <string name="middle">Middle</string>
+    <string name="top_fragment">Top Fragment</string>
+    <string name="bottom_fragment">Bottom Fragment</string>
+    <string name="next">Next</string>
+    <string name="last">Last</string>
+</resources>
