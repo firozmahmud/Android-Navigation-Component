@@ -30,8 +30,9 @@ class NextFragment : BaseFragment() {
         navController = Navigation.findNavController(view)
 
         btnNext.setOnClickListener {
-            var bundle = bundleOf("bundle" to null)
-            navController!!.navigate(R.id.action_nextFragment_to_afterNextFragment, bundle)
+            val bundle = bundleOf("bundle" to "Hello"
+            , "another" to 100)
+            navController.navigate(R.id.action_nextFragment_to_afterNextFragment, bundle)
         }
     }
 

@@ -10,11 +10,11 @@ import com.example.android_navigation_component.base.BaseFragment
 
 class AfterNextFragment : BaseFragment() {
 
-    private var bundle: String? = null
+    private var data: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bundle = requireArguments().getString("bundle")
+        data = requireArguments().getString("bundle")
     }
 
     override fun onCreateView(
@@ -29,7 +29,7 @@ class AfterNextFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        bundle?.let { showToast(it) }
+        data?.let { showToast(it) }
     }
 
 }

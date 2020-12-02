@@ -29,7 +29,7 @@ class MiddleFragment : BaseFragment() {
         navController = Navigation.findNavController(view)
 
         btnNext.setOnClickListener {
-            navController!!.navigate(R.id.action_middleFragment_to_nextFragment)
+            navController.navigate(R.id.action_middleFragment_to_nextFragment)
         }
     }
 

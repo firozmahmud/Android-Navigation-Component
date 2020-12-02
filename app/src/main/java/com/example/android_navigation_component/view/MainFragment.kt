@@ -29,15 +29,15 @@ class MainFragment : BaseFragment() {
         navController = Navigation.findNavController(view)
 
         btnTop.setOnClickListener {
-            navController!!.navigate(R.id.action_mainFragment_to_topFragment)
+            navController.navigate(R.id.action_mainFragment_to_topFragment)
         }
 
         btnMiddle.setOnClickListener {
-            navController!!.navigate(R.id.action_mainFragment_to_middleFragment)
+            navController.navigate(R.id.action_mainFragment_to_middleFragment)
         }
 
         btnBottom.setOnClickListener {
-            navController!!.navigate(R.id.action_mainFragment_to_bottomFragment)
+            navController.navigate(R.id.action_mainFragment_to_bottomFragment)
         }
     }
 
